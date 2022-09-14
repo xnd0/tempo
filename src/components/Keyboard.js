@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import useSound from 'use-sound';
 
 import C3 from '../components/assets/sounds/synth_audio/01-C3.mp3';
@@ -42,7 +42,80 @@ function Keyboard() {
     const [playD4] = useSound(D4);
     const [playDs4] = useSound(Ds4);
     const [playE4] = useSound(E4);
-    
+
+
+
+    useEffect(() => {
+        document.addEventListener('keydown', WhichKey)
+    }, [])
+
+    const WhichKey = (e) => {
+        console.log("Key Press Is: ", e.key);
+
+        if (e.key === 's') {
+            playC3();
+        };
+        if (e.key === 'e') {
+            playCs3();
+        };
+        if (e.key === 'd') {
+            playD3();
+        };
+        if (e.key === 'r') {
+            playDs3();
+        };
+        if (e.key === 'f') {
+            playE3();
+        };
+        if (e.key === 'g') {
+            playF3();
+        };
+        if (e.key === 'y') {
+            playFs3();
+        };
+        if (e.key === 'h') {
+            playG3();
+        };
+        if (e.key === 'u') {
+            playGs3();
+        };
+        if (e.key === 'j') {
+            playA4();
+        };
+        if (e.key === 'i') {
+            playAs4();
+        };
+        if (e.key === 'k') {
+            playB4();
+        };
+        if (e.key === 'l') {
+            playC4();
+        };
+        if (e.key === 'p') {
+            playCs4();
+        };
+        if (e.key === ';') {
+            playD4();
+        };
+        if (e.key === '[') {
+            playDs4();
+        };
+        if (e.key === "'") {
+            playDs4();
+        };
+
+
+
+
+
+
+
+
+
+
+    };
+
+
 
     return (
         <div>
@@ -50,6 +123,7 @@ function Keyboard() {
             <div>
                 Keyboard Component Here
             </div>
+
 
             {/* <!-- piano keys --> */}
             <section>

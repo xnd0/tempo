@@ -12,8 +12,10 @@ function Effect() {
     function metroLoop() {
         setInterval(() => {
             playclick1();
-        },1000);
+        }, 1000);
+
     }
+
 
     return (
         <div>
