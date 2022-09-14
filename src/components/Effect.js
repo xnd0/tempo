@@ -1,13 +1,19 @@
 import React from 'react';
 import useSound from 'use-sound';
 
-import click1 from '../components/assets/sounds/01-C3.mp3';
+import click1 from '../components/assets/sounds/clapclick.mp3';
 
 
 
 function Effect() {
 
     const [playclick1] = useSound(click1);
+
+    function metroLoop() {
+        setInterval(() => {
+            playclick1();
+        },1000);
+    }
 
     return (
         <div>
@@ -17,7 +23,7 @@ function Effect() {
             </div>
 
             <div>
-                <button onClick={playclick1}>Sound!</button>
+                <button onClick={metroLoop}>Sound Forever (1000ms)!</button>
             </div>
 
         </div>
