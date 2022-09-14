@@ -43,11 +43,15 @@ function Keyboard() {
     const [playDs4] = useSound(Ds4);
     const [playE4] = useSound(E4);
 
+    // var context = new AudioContext();
+
+    // document.querySelector('button').addEventListener('click', function() {
+    //     var context = new AudioContext();
 
 
     useEffect(() => {
-        document.addEventListener('keydown', WhichKey)
-    }, [])
+        document.addEventListener('keydown', WhichKey, false)
+    },[])
 
     const WhichKey = (e) => {
         console.log("Key Press Is: ", e.key);
@@ -103,18 +107,7 @@ function Keyboard() {
         if (e.key === "'") {
             playDs4();
         };
-
-
-
-
-
-
-
-
-
-
     };
-
 
 
     return (
