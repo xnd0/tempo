@@ -35,7 +35,7 @@ function Effect() {
             </div>
 
             <div>
-                <button onClick={metroLoop}>Sound Forever (1000ms)!</button>
+                <button onClick={metroLoop}>Metronome (1000ms)</button>
             </div>
 
         </div>

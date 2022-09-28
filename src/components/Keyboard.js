@@ -1,4 +1,5 @@
 import { React, useEffect } from 'react';
+// import React from 'react';
 import useSound from 'use-sound';
 
 import C3 from '../components/assets/sounds/synth_audio/01-C3.mp3';
@@ -50,7 +51,7 @@ function Keyboard() {
 
 
     useEffect(() => {
-        document.addEventListener('keydown', WhichKey, false)
+        document.addEventListener('keydown', WhichKey, true)
     },[])
 
     const WhichKey = (e) => {

@@ -7,11 +7,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Keyboard Noise
+        Tempo Keyboard
       </header>
+
+      {/* just Metronome for now  */}
       <div>
         <Effect />
       </div>
+
+      {/* Piano Keys  */}
       <div>
         <Keyboard />
       </div>
